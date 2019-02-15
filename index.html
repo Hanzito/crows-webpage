@@ -32,7 +32,7 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
               <a class="nav-link" href="#header">Home</a>
-            </li>
+            </li> 
             <li class="nav-item">
               <a class="nav-link" href="#info-one">About</a>
             </li>
@@ -52,12 +52,98 @@
                 <a class="nav-link" href="#recipeCarousel">Quienes somos</a>
             </li>            
             <li class="nav-item">
-              <a class="nav-link" href="#login">Login/Registro</a>
-            </li>            
+              <a class="nav-link" data-toggle="modal" data-target="#loginModal">Login</a>
+            </li>
+            <span class="navbar-text"> / </span>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="modal" data-target="#registerModal">Registro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#user">Usuario</a>
+            </li>  
           </ul>
         </div>
       </div>
     </nav>
+
+    <!-- MODAL DE LOGIN -->
+  
+    
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalTitulo" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="loginModalTitulo">Login de Usuario</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="loginInputUsername">Nombre de usuario</label>
+                <input type="test" class="form-control" id="loginInputUsername" placeholder="Ingresa tu usuario">
+              </div>
+              <div class="form-group">
+                <label for="loginInputUserPassword">Contraseña</label>
+                <input type="password" class="form-control" id="loginInputUserPassword" placeholder="Contraseña">
+              </div>
+              <button type="submit" class="btn btn-primary">Loguear</button>
+            </form>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex justify-content-center links">
+              No tenés cuenta de usuario?<a href="#registerModal" data-toggle="modal" data-target="#registerModal" data-dismiss="modal">Registrate</a>
+            </div>
+            <div class="d-flex justify-content-center">
+              <a href="#">Olvidaste tu contraseña?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- MODAL DE REGISTER -->
+  
+    
+    <div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalTitulo" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header bg-secondary">
+            <h3 class="modal-title" id="registerModalTitulo">Registro de Usuario</h3>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body bg-info">
+            <form>
+              <div class="form-group">
+                <label for="registerInputUsername">Nombre de usuario</label>
+                <input type="test" class="form-control" id="registerInputUsername" placeholder="Ingresa tu usuario">
+              </div>
+              <div class="form-group">
+                <label for="registerInputUserMail">Email address</label>
+                <input type="email" class="form-control" id="registerInputUserMail" aria-describedby="emailHelp" placeholder="soyunmanco@gmail.com">
+              </div>
+              <div class="form-group">
+                <label for="registerInputUserPassword">Contraseña</label>
+                <input type="password" class="form-control" id="registerInputUserPassword" placeholder="Contraseña">
+              </div>
+              <button type="submit" class="btn btn-primary">Registra tu usuario</button>
+            </form>
+          </div>
+          <div class="card-footer">
+            <div class="d-flex justify-content-center links">
+              Ya tenés cuenta?<a href="#loginModal"  data-toggle="modal" data-target="#loginModal" data-dismiss="modal">Logueate acá</a>
+            </div>
+            <div class="d-flex justify-content-center">
+              <a href="#">Olvidaste tu contraseña?</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- HEADER -->
     <header id="header">
